@@ -1,0 +1,39 @@
+{
+  "port": 12345,
+  "viewRoot": "../client",
+  "uploadRoot": "../uploads",
+  "thumbnailRoot": "../thumbs",
+  "allowedFile": {
+    "regex": "\\.(jpg|jpeg|png|gif)$",
+    "failedString": "Only image files are allowed"
+  },
+  "logger": ":remote-user@:remote-addr [:date[clf]] :method :url (HTTP/:http-version) :status :response-time ms",
+  "uploadFields": [
+    {
+      "name": "file",
+      "maxCount": 10
+    }
+  ],
+  "routes": {
+    "urlPrefix": "",
+    "directory": "routes",
+    "tree": [
+      {
+        "url": "/file",
+        "file": "delete.js"
+      },
+      {
+        "url": "/upload",
+        "file": "upload.js"
+      },
+      {
+        "url": "/file/_/tree",
+        "file": "tree.js"
+      },
+      {
+        "url": "/folder",
+        "file": "folder.js"
+      }
+    ]
+  }
+}

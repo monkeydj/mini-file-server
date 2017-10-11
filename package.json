@@ -1,0 +1,25 @@
+{
+  "name": "uploads",
+  "version": "0.3.0",
+  "description": "file server component (back end)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm i && node index.js",
+    "dev": "npm i && nodemon --watch ./ index.js"
+  },
+  "author": "monkeydj",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "~4.15.2",
+    "fs-extra": "^2.1.2",
+    "jimp": "^0.2.27",
+    "morgan": "^1.8.1",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {
+    "debug": "^2.6.3",
+    "nodemon": "~1.11.0"
+  }
+}
